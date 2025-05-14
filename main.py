@@ -66,7 +66,7 @@ results = ['' for i in range(5)]
 
 
 # choosing a random word
-load_word(filename='../words.txt')
+load_word(filename='words.txt')
 
 random_choise()
 
