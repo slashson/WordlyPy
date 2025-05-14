@@ -12,7 +12,7 @@ def user_guess():
     if len(pguess) == len(guessed_word):
         print(pguess)
     else:
-        print('ТЫ ДЕБИЛ СУКА ЕБАННЫЙ БЛЯТЬ')
+        print('Letters count doesn`t pass')
         user_guess()
 
 
