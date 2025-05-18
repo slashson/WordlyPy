@@ -1,5 +1,5 @@
 apple
-grapeqw
-stonel
+grape
+stone
 world
-plainlol
+plain
