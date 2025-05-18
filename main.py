@@ -18,24 +18,24 @@ def user_guess():
 # Mathing players guessing and guessed word
 def match(player_guess, the_word):
     results = ['' for _ in range(len(the_word))]
-    word_copy = the_word.copy()  # Копия слова, чтобы "использовать" буквы
+    word_copy = the_word.copy()  # Word copy, to 'use' the letter
     print(the_word)
-    # 1. Сначала отмечаем "зелёные" буквы
+    # 1. GREEN (letter exist, is on the place)
     for i in range(len(the_word)):
         if player_guess[i] == word_copy[i]:
-            results[i] = '🟩'
-            word_copy[i] = None  # Убираем использованную букву
+            results[i] = ' 🟩 '
+            word_copy[i] = None  # Deleted already used letter
 
-    # 2. Затем отмечаем "жёлтые" (буква есть, но не на месте)
+    # 2. YELLOW (lettor exist but not on the place)
     for i in range(len(the_word)):
-        if results[i] == '':  # Только если ещё не GREEN
+        if results[i] == '':  # if not already GREEN
             if player_guess[i] in word_copy:
-                results[i] = '🟨'
-                # Убираем первую найденную букву, чтобы не использовать повторно
+                results[i] = ' 🟨 '
+                # Delete first founded letter, to don`t use it again
                 idx = word_copy.index(player_guess[i])
                 word_copy[idx] = None
             else:
-                results[i] = '⬛'
+                results[i] = ' ⬛ '
 
     return results
 
@@ -67,11 +67,11 @@ results = ['' for i in range(5)]
 # choosing a random word
 load_word(filename='words.txt')
 
-random_choise()
-
-user_guess()
-
-#Match cheking
-results = match(player_guess=pguess, the_word=guessed_word)
-print(*results)
+# random_choise()
+#
+# user_guess()
+#
+# #Match cheking
+# results = match(player_guess=pguess, the_word=guessed_word)
+# print(*results)
 
