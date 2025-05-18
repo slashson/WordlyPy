@@ -21,7 +21,7 @@ class WorldlyApp:
 
         self.choose_secret_word(secret_word=random_choise())
         self.frame = ctk.CTkFrame(self.screen, fg_color='#211F20')
-        self.frame.place(relx=0.5, rely=0.5, anchor='center')
+        self.frame.place(relx=0.5, y=250, anchor='center')
         # ctk.CTkLabel(frame, text="Register", width=50, height=50, font=("SF Pro", 25, "bold")).pack(padx=130, pady=20)
         self.playground(screen=self.screen)
 
@@ -41,16 +41,16 @@ class WorldlyApp:
         for row in range(5):
             for col in range(4):
                 entry = ctk.CTkButton(self.frame,
-                                      width=87,
-                                      height=87,
+                                      width=75,
+                                      height=75,
                                       anchor='center',
                                       fg_color='#211F20',
                                       hover_color='#211F20',
                                       border_color='#4D4D4D',
                                       border_width=4,
-                                      corner_radius=13,
+                                      corner_radius=14,
                                       text='')
-                entry.grid(row=row, column=col, padx=5, pady=5)
+                entry.grid(row=row, column=col, padx=2, pady=2)
                 entries[row][col] = entry
 '''Add Lose Screen, restart button'''
 '''Add Win Screen, new game button'''
