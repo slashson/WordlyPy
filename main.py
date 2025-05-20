@@ -1,5 +1,5 @@
 import random
-
+import customtkinter as ctk
 
 # Player tries
 def user_guess():
@@ -23,19 +23,19 @@ def match(player_guess, the_word):
     # 1. GREEN (letter exist, is on the place)
     for i in range(len(the_word)):
         if player_guess[i] == word_copy[i]:
-            results[i] = ' 🟩 '
+            results[i] = 'g'
             word_copy[i] = None  # Deleted already used letter
 
     # 2. YELLOW (lettor exist but not on the place)
     for i in range(len(the_word)):
         if results[i] == '':  # if not already GREEN
             if player_guess[i] in word_copy:
-                results[i] = ' 🟨 '
-                # Delete first founded letter, to don`t use it again
+                results[i] = 'y'
+                # Delete first founded letter, not to use it again
                 idx = word_copy.index(player_guess[i])
                 word_copy[idx] = None
             else:
-                results[i] = ' ⬛ '
+                results[i] = 'b'
 
     return results
 
@@ -66,6 +66,7 @@ results = ['' for i in range(5)]
 
 # choosing a random word
 load_word(filename='words.txt')
+
 
 # random_choise()
 #
