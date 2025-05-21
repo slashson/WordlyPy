@@ -63,7 +63,8 @@ WorldlyPY/
 
 ```bash
 pip install customtkinter pillow
-
+```
+```bash
 python gui.py
 ```
 
