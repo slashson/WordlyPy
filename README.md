@@ -19,11 +19,28 @@ The player must guess a random 4-letter English word in 5 attempts using an on-s
 
 ## 🧩 Features
 
-- Full **GUI** interface — no typing required.
-- Random word selection from a text file.
-- Interactive on-screen keyboard.
-- Game over screen: win or lose.
-- Restart button and color-coded feedback.
+- Full **GUI interface** using `customtkinter`
+- Responsive **on-screen keyboard**
+- Random word loading from `words.txt`
+- Visual feedback with color-coded buttons
+- Win/lose detection and game restart
+- Modular and scalable codebase
+  
+---
+
+## 🧠 Under the Hood
+
+This project demonstrates clean **Python OOP (Object-Oriented Programming)** practices with:
+
+- ✅ Class-based architecture (`WorldlyApp`, `Keyboard`)
+- ✅ GUI layout built with **`customtkinter`** (a modern wrapper around `tkinter`)
+- ✅ Use of **encapsulation**, **callback functions**, and **modularity**
+- ✅ Separation of logic and interface (`main.py` handles logic, `gui.py` handles UI)
+- ✅ Event-driven design (button presses update game state dynamically)
+- ✅ Basic file I/O (reading from `words.txt`)
+- ✅ Manual control of GUI components (text fields, colors, grid)
+
+This makes the code easy to maintain, extend, and read.
 
 ---
 
