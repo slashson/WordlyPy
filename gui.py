@@ -63,7 +63,8 @@ class WorldlyApp:
 
         for i, letter in enumerate(word):
             self.entries[self.current_row][i].configure(text=letter,
-                                                        font=('SF Pro', 20))
+                                                        font=('SF Pro', 20),
+                                                        text_color_disabled='white')
 
         if len(word) == 4:
             result = match(list(word.lower()), self.secret_word)
