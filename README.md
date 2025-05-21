@@ -65,7 +65,7 @@ WorldlyPY/
 pip install customtkinter pillow
 
 python gui.py
-```bash
+```
 
 🛠 Dependencies
 	•	Python 3.10+
